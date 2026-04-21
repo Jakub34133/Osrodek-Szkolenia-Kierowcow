@@ -1,0 +1,332 @@
+@charset "utf-8";
+/* ---------------------------------------------------------- */
+/* Style ogólne */
+body
+{
+    color: #482626;
+    background-color: white;
+    font-family: sans-serif;
+    font-size: small;
+    margin-left: 40px;
+}
+
+h2
+{
+    font-size: large;
+}
+
+h2::first-letter
+{
+    font-size: xx-large;
+}
+
+/* ---------------------------------------------------------- */
+/* Tabela */
+td.zaznaczona
+{
+    background-color: #ffc891;
+}
+td.suma
+{
+    background-color: #dfdfdf;
+}
+td.razem
+{
+    background-color: #c1c1c1;
+}
+
+table
+{
+    text-align: center;
+    border-spacing: 0px;
+    background-color: transparent;
+    table-layout: fixed;
+    min-width: 900px;
+    padding: 0px;
+}
+
+thead
+{
+    color: #400000;
+    font-weight: bold;
+    height: 30px;
+}
+
+thead td
+{
+    border-bottom: 2px solid #8a4848;
+}
+
+thead a
+{
+    color: #8a4848;
+    text-decoration: none;
+    display: block;
+}
+
+thead a:hover
+{
+    color: #c13f00;
+    text-decoration: underline;
+}
+
+tbody td
+{
+    border-bottom: 1px solid #c39380;
+    height: 30px;
+    max-width: 150px;
+    color: black;
+}
+
+tbody tr:nth-child(even)
+{
+    background-color: #f8f3f1;
+}
+
+tfoot
+{
+    color: #400000;
+    font-weight: bold;
+    text-align: left;
+    height: 30px;
+}
+
+tfoot td
+{
+    padding-left: 10px;
+    height: 35px;
+    border-bottom: 1px solid #c89379;
+    border-top: 1px solid #c89191;
+}
+
+tfoot td:last-child
+{
+    background-color: #ffeedd;
+    text-align: center;
+    padding: 0;
+}
+
+/* ---------------------------------------------------------- */
+/* Formularz */
+form#formInstruktorDodaj
+{
+    display: none;
+}
+
+fieldset
+{
+    width: 420px;
+    border: 1px dotted #800000;
+    border-radius: 5px;
+    padding-bottom: 15px;
+}
+
+label
+{
+    display: block;
+    min-width: 130px;
+    float: left;
+}
+
+input[type=text], input[type=password], textarea
+{
+    width: 260px;
+    color: inherit;
+    border-radius: 3px;
+    border: 1px solid #c0c0c0;
+    padding: 5px 10px 5px 10px;
+}
+
+textarea
+{
+    width: 390px;
+    min-height: 70px;
+}
+
+.lbl
+{
+    line-height: 30px;
+    margin: 10px 0 0 0;
+}
+
+select
+{
+    width: 260px;
+    color: inherit;
+    border-radius: 3px;
+    border: 1px solid #c0c0c0;
+    padding: 5px 10px 5px 10px;
+}
+
+option
+{
+    padding: 2px 5px 2px 5px;
+}
+
+input[type=text]:focus, input[type=password]:focus, select:focus
+{
+    border: 1px solid #c89379;
+    box-shadow: 0 0 5px #bc7a7a;
+}
+
+label.cbxrbt
+{
+    width: 300px;
+}
+
+input[type=checkbox], input[type=radio]
+{
+    margin-left: 130px;
+}
+
+input[type=submit], input[type=reset], input[type=button], .btn
+{
+    min-width: 90px;
+    min-height: 30px;
+    border-radius: 5px;
+    padding: 7px 10px 7px 10px;
+}
+
+input[type=submit]
+{
+    background-color: #0062c4;
+    color: #ffffff;
+    border: 1px solid #004a95;
+}
+
+input[type=reset]
+{
+    background-color: #ffffff;
+    color: #4f4f4f;
+    border: 1px solid #606060;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+input[type=button]
+{
+    margin-left: 15px;
+}
+
+input[type=submit]:hover, input[type=submit]:focus
+{
+    background-color: #158aff;
+}
+
+input[type=reset]:hover, input[type=reset]:focus
+{
+    background-color: #eaeaea;
+}
+
+input[type=text], input[type=password], select
+{
+    max-width: 100%;
+}
+
+.btn, input[type=button]
+{
+    background-color: #17ac1c;
+    color: #fff;
+    border: 1px solid #149518;
+}
+a.btn
+{
+    text-decoration: none;
+}
+.btn:hover, input[type=button]:hover
+{
+    background-color: #19c41f;
+    cursor: pointer;
+}
+
+/* responsywność */
+@media(max-width: 500px)
+{
+    fieldset
+    {
+        width: 280px;
+    }
+    label
+    {
+        float: none;
+    }
+}
+
+/* ---------------------------------------------------------- */
+/* style komunikatów */
+.msg
+{
+    padding: 10px;
+    border-radius: 5px;
+}
+.success
+{
+    background-color: #c5ffc7;
+    border: 1px solid #4ecc52;
+}
+.info
+{
+    background-color: #dadfff;
+    border: 1px solid #6d7fff;
+}
+.warn
+{
+    background-color: #fffdc2;
+    border: 1px solid #fdd014;
+}
+.error
+{
+    background-color: #ffdfdf;
+    border: 1px solid #ff7171;
+}
+.def
+{
+    background-color: #f0f0f0;
+    border: 1px solid #bababa;
+}
+
+/* Style przycisków */
+
+table .btn
+{
+    padding: 4px;
+}
+
+a.update
+{
+    background-color: #ffa953;
+    border: 1px solid #d96c00;
+}
+a.update:hover
+{
+    background-color: #ffb56a;
+}
+
+a.delete
+{
+    background-color: #ff4d4d;
+    border: 1px solid #d30909;
+}
+a.delete:hover
+{
+    background-color: #ff7d7d;
+}
+
+.default, #btnSzukaj
+{
+    background-color: #f0f0f0;
+    border: 1px solid #bababa;
+    color: #000;
+}
+.default:hover, #btnSzukaj:hover
+{
+    background-color: #f7f7f7;
+}
+
+#btnSzukaj
+{
+    padding: 5px 10px 5px 10px;
+    min-height: 10px;
+}
+
+/* ---------------------------------------------------------- */
